@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kid Shows</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="./img/gg.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            width: 100vw;
+            overflow-x: hidden;
+            font-family: 'Outfit', sans-serif;;
+        }
+
+        .card {
+            cursor: pointer;
+        }
+  
+        .modal-body label {
+            padding: 10px 0;
+        }
+
+        nav .shw-s {
+            display: none;
+        }
+
+        .sa:hover {
+            text-decoration: underline;
+        }
+
+        @media only screen and (min-width:1200px) {
+            .card:hover > .card-img {
+            filter: brightness(50%);
+        }
+
+            .card:hover .card-img-overlay {
+                visibility: visible !important;
+            }
+        }
+
+        @media only screen and (max-width: 1200px) {
+            #sidebar {
+                position: relative;
+                width: 100% !important;
+                background-color: rgba(0,0,0,.01) !important;
+                z-index: 0;
+            }
+
+            #sidebar .tg-s {
+                background-color: #00a16c !important;
+                color: white;
+            }
+
+            #sidebar .tg-s button{
+                color: black !important;
+                background-color: white !important;
+                border-color: white !important;
+            }
+
+            #sidebar .tgt-s {
+                color: #28a745 !important;
+            }
+
+            #sidebar .tgt-s > a {
+                color: #28a745 !important;
+            }
+
+            #sidebar .rmd-s {
+                display: none !important;
+            }
+
+            nav > .shw-s {
+                display: flex;
+            }
+            
+
+            #main {
+                width: 100% !important;
+                margin-left: 0 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar Top-->
+    <nav class="navbar sticky-top" style="background-color: #e7b324;">
+        <div class="ms-auto pe-4">
+            <a href="#" class="btn fs-5 text-white">Sign Up</a>
+            <a href="#" class="btn fs-5 text-white" data-bs-toggle="modal" data-bs-target="#login-modal">Log In</a>
+        </div>
+        <div class="input-group shw-s mx-auto" style="width: 95% !important;">
+            <button type="button" class="btn text-white btn-dark"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <input class="rounded-end border-0 form-control" style="outline: 0;" type="text" />
+        </div>
+    </nav>
+    <div id="main" style="width: 80%;margin-left:19.8%;">
+        <!-- Carousel-->
+        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+            <!--Carousel Indicators-->
+            <div class="carousel-indicators">
+                <button data-bs-target="#carousel" data-bs-slide-to="0" class="active"></button>
+                <button data-bs-target="#carousel" data-bs-slide-to="1"></button>
+                <button data-bs-target="#carousel" data-bs-slide-to="2"></button>
+                <button data-bs-target="#carousel" data-bs-slide-to="3"></button>
+             </div>
+             <!-- Carousel Contents-->
+            <div class="carousel-inner">
+                   <div class="carousel-item active text-center">
+                       <img src="./img/ar.jpg" alt="" class="img img-fluid">
+                   </div>
+                   <div class="carousel-item">
+                       <img src="./img/pfg.jpg" alt="" class="img img-fluid">
+                   </div>
+                   <div class="carousel-item">
+                       <img src="./img/ctcd.jpg" alt="" class="img img-fluid">
+                   </div>
+                   <div class="carousel-item">
+                    <img src="./img/dte.jpg" alt="" class="img img-fluid">
+                </div>
+           </div>
+           <!-- Carousel Prev/Next Button-->
+           <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon text-danger"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+       </div>
+       <!-- End of Carousel-->
+
+       <!-- Cards-->
+        <div class="container">
+
+            <!-- First Row-->
+            <div class="headers p-3 position-relative">
+                <span class="h3">Featured Shows</span>
+                <span class="position-absolute end-0 me-5">
+                    <a href="#" class="btn sa">Show All</a>
+                </span>
+            </div>
+            
+            <div class="row g-3">
+                <div class="col-6 col-md-3">
+                    <div class="card h-100">
+                        <img class="img card-img" src="./img/arthur.jpg" alt="">
+                        <div class="card-img-overlay text-light" style="visibility: hidden;">
+                            <h4>Arthur</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ut quis reprehenderit, architecto dignissimos quidem dolorem quaerat veritatis minima mollitia soluta, placeat odit fuga possimus explicabo illum voluptates tempore eius.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="card h-100">
+                        <img class="img card-img" src="./img/powerpuff-girls.jpg" alt="">
+                        <div class="card-img-overlay text-light" style="visibility: hidden;">
+                            <h4>The Powerpuff Girls</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ut quis reprehenderit, architecto dignissimos quidem dolorem quaerat veritatis minima mollitia soluta, placeat odit fuga possimus explicabo illum voluptates tempore eius.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="card h-100">
+                        <img class="img card-img h-100" src="./img/courage-cowardly-dog.jpg" alt="">
+                        <div class="card-img-overlay text-light" style="visibility: hidden;">
+                            <h4>Courage The Cowardly Dog</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ut quis reprehenderit, architecto dignissimos quidem dolorem quaerat veritatis minima mollitia soluta, placeat odit fuga possimus explicabo illum voluptates tempore eius.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="card h-100">
+                        <img class="img card-img" src="./img/dora.jpg" alt="">
+                        <div class="card-img-overlay text-light" style="visibility: hidden;">
+                            <h4>Dora the Explorer</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ut quis reprehenderit, architecto dignissimos quidem dolorem quaerat veritatis minima mollitia soluta, placeat odit fuga possimus explicabo illum voluptates tempore eius.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- First Row End-->
+
+            <!-- Second Row-->
+            <div class="headers p-3 position-relative">
+                <span class="h3">Most Watched</span>
+                <span class="position-absolute end-0 me-5">
+                    <a href="#" class="btn sa">Show All</a>
+                </span>
+            </div>
+
+            <div class="row g-3">
+                <div class="col-6 col-md-3">
+                    <div class="card h-100">
+                        <img class="img card-img" src="./img/arthur.jpg" alt="">
+                        <div class="card-img-overlay text-light" style="visibility: hidden;">
+                            <h4>Arthur</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ut quis reprehenderit, architecto dignissimos quidem dolorem quaerat veritatis minima mollitia soluta, placeat odit fuga possimus explicabo illum voluptates tempore eius.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="card h-100">
+                        <img class="img card-img" src="./img/powerpuff-girls.jpg" alt="">
+                        <div class="card-img-overlay text-light" style="visibility: hidden;">
+                            <h4>The Powerpuff Girls</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ut quis reprehenderit, architecto dignissimos quidem dolorem quaerat veritatis minima mollitia soluta, placeat odit fuga possimus explicabo illum voluptates tempore eius.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="card h-100">
+                        <img class="img card-img h-100" src="./img/courage-cowardly-dog.jpg" alt="">
+                        <div class="card-img-overlay text-light" style="visibility: hidden;">
+                            <h4>Courage The Cowardly Dog</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ut quis reprehenderit, architecto dignissimos quidem dolorem quaerat veritatis minima mollitia soluta, placeat odit fuga possimus explicabo illum voluptates tempore eius.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="card h-100">
+                        <img class="img card-img" src="./img/dora.jpg" alt="">
+                        <div class="card-img-overlay text-light" style="visibility: hidden;">
+                            <h4>Dora the Explorer</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ut quis reprehenderit, architecto dignissimos quidem dolorem quaerat veritatis minima mollitia soluta, placeat odit fuga possimus explicabo illum voluptates tempore eius.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Second Row End-->
+        </div>
+    </div>
+    <!-- End Of Cards-->
+
+    <!-- Sidebar-->
+    <div class="fixed-top h-100" id="sidebar" style="background-color: #00a16c;width: 20%;">
+        <div class="container p-3">
+            <a href="#" class="btn text-light fs-5 py-3 rmd-s" style="font-weight: 700;">
+                <i class="fa-solid fa-house"></i> Home
+            </a><br/>
+            <a href="#" class="btn text-light fs-5 py-3 rmd-s">
+                <i class="fa-solid fa-magnifying-glass"></i> Search
+            </a>
+            <div  class="text-light fs-5 mt-3 p-2 tgt-s position-relative">
+                 <i class="fa-solid fa-star px-1"></i>Your Favorites 
+                <a href="#" class="btn text-light position-absolute end-0"><i class="fa-solid fa-plus"></i></a>
+            </div>
+            <div style="height:360px;">
+                <div style="background-color: white;" class=" px-3 py-2 rounded my-2 tg-s">
+                    <p class="fs-5">Create your first favorites</p>
+                    <p>Come on, vámonos</p>
+                    <button type="button" class="btn border border-2 border-dark">Create favorites</button>
+                </div>
+                <div style="background-color: white;" class="p-3 rounded my-2 tg-s">
+                    <p class="fs-5">Let's look for what's popular today</p>
+                    <p>Come on, vámonos</p>
+                    <button type="button" class="btn border border-2 border-dark">Browse popular</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Sidebar-->
+
+    <!-- Modals -->
+    <div id="login-modal" class="modal fade">
+        <div class="modal-dialog bg-light">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Log In</h5>
+                    <button type="button" class="btn" data-bs-dismiss="modal">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+    
+                </div>
+                <div class="modal-body">
+                   <form action="">
+                        <div class="form-group">
+                            <label for="username">Username</label><br />
+                            <input type="text" name="username" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label><br/>
+                            <input type="password" name="password" class="form-control">
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" name="remember">
+                            <label for="remember">Remember Me</label>
+                        </div>
+                        <a style="text-decoration: none;" href="#">Forgot password?</a> <br/> <br />
+                        <button type="submit" class="btn btn-success">Log In</button>
+                   </form>
+    
+                </div>
+                <div class="modal-footer">
+    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modals End-->
+</body>
+</html>
